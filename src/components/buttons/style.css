@@ -1,0 +1,15 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  border-style: solid;
+  border-color: var(--purple-dark);
+  background: transparent;
+  cursor: pointer;
+  color: var(--offwhite);
+}

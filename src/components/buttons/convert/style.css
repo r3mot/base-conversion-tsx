@@ -1,0 +1,12 @@
+@import url("../style.css");
+
+.convert-button {
+  width: var(--btn-wd-lg);
+  height: var(--btn-hg-lg);
+  border-radius: var(--border-radius-xl);
+  font-size: var(--font-sz-md);
+}
+
+.convert-button:hover {
+  background: var(--purple-dark);
+}

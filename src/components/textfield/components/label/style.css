@@ -1,0 +1,10 @@
+.label-container {
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+
+.label {
+  color: var(--offwhite);
+  font-size: var(--font-sz-md);
+}

@@ -1,0 +1,74 @@
+.navbar-container,
+.active {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  background: var(--purple-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-icon {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  left: 16px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--purple-light);
+  display: none;
+}
+
+.active {
+  display: flex;
+  width: 100%;
+}
+
+.open {
+  /* background-image: url("../../assets/menu-icon.png"); */
+  background-image: url("../../assets/open.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.close {
+  background-image: url("../../assets/close.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* RECENTLY ADDED - REVISIT */
+
+@media screen and (max-width: 1500px) {
+  .navbar-container {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .toggle-icon {
+    display: block;
+  }
+
+  .navbar-container {
+    display: none;
+  }
+  /* .navbar-container {
+    width: 80px;
+    color: transparent;
+  } */
+}
+
+@media screen and (max-width: 750px) {
+  .navbar-container {
+    display: none;
+  }
+}
