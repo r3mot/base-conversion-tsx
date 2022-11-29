@@ -33,7 +33,6 @@
 }
 
 .open {
-  /* background-image: url("../../assets/menu-icon.png"); */
   background-image: url("../../assets/open.png");
   background-repeat: no-repeat;
   background-size: cover;
