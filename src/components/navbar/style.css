@@ -20,7 +20,7 @@
   position: absolute;
   z-index: 1;
   top: 16px;
-  left: 16px;
+  left: 35px;
   font-size: 2rem;
   cursor: pointer;
   color: var(--purple-light);
@@ -29,6 +29,7 @@
 
 .active {
   display: flex;
+  padding-top: 20px;
   width: 100%;
 }
 
@@ -60,10 +61,6 @@
   .navbar-container {
     display: none;
   }
-  /* .navbar-container {
-    width: 80px;
-    color: transparent;
-  } */
 }
 
 @media screen and (max-width: 750px) {

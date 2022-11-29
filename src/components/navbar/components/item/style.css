@@ -86,3 +86,11 @@
     display: flex;
   }
 }
+
+/* Decrease button width for accessability
+   The buttons are too wide for mobile devices */
+@media screen and (max-height: 765px) {
+  .nav-item-container {
+    width: 50%;
+  }
+}
