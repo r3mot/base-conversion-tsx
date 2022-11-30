@@ -7,11 +7,10 @@
 
 # Table of contents
 
-- [:notebook_with_decorative_cover: TODO](#task) <br>
 - [:muscle: Motivation](https://github.com/r3mot/base-conversion-tsx/wiki/Motivation) <br>
 - [:computer: Technology](https://github.com/r3mot/base-conversion-tsx/wiki/Technology) <br>
 - [:white_flag: Development Process](https://github.com/r3mot/base-conversion-tsx/wiki/Development-Process)
-- [:shipit: Local Development](#install)
+- [:shipit: Local Development]([#install](https://github.com/r3mot/base-conversion-tsx/wiki/Local-Development))
 
 <!-- SECTION -->
 <a name="task"></a>
@@ -22,6 +21,3 @@
 - [ ] Feat: Implement Base Arithmetic
 - [ ] Chore: Create new prettier configuration
 - [ ] Test: Implement component test
-
-
-```
