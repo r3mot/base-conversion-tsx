@@ -9,7 +9,7 @@
 - [:muscle: Motivation](https://github.com/r3mot/base-conversion-tsx/wiki/Motivation) <br>
 - [:computer: Technology](https://github.com/r3mot/base-conversion-tsx/wiki/Technology) <br>
 - [:white_flag: Development Process](https://github.com/r3mot/base-conversion-tsx/wiki/Development-Process)
-- [:shipit: Local Development]([#install](https://github.com/r3mot/base-conversion-tsx/wiki/Local-Development))
+- [:shipit: Local Development](https://github.com/r3mot/base-conversion-tsx/wiki/Local-Development)
 
 <!-- SECTION -->
 <a name="task"></a>
