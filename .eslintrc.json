@@ -21,5 +21,5 @@
         ],
         "@typescript-eslint/no-explicit-any": 2
     },
-    "ignorePatterns": ["src/**/*.test.ts", "vite.config.ts","src/frontend/generated/*"]
+    "ignorePatterns": ["src/**/*.test.ts", "/dist","vite.config.ts","src/frontend/generated/*"]
 }
