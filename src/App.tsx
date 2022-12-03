@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ConvertContext, ToggleContext } from "./context";
-import { Navbar } from "./components";
-import { Card } from "./components";
+import { Navbar, Card } from "./layouts";
 import "./App.css";
 
 /**

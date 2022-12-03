@@ -1,7 +1,11 @@
 import { useContext } from "react";
 import { ConvertContext } from "../../../context";
-import { Label } from "../components";
-import "./style.css";
+import { Label } from "../../label";
+import style from "./style.module.css";
+import tfStyle from "../textfield.module.css";
+
+const containerStyle = `${style.container} ${tfStyle.container}`;
+const inputStyle = `${style.input} ${tfStyle.textField}`;
 
 /**
  * InputField Component
@@ -14,10 +18,10 @@ const InputField = () => {
   const { setInput, conversion } = useContext(ConvertContext);
 
   return (
-    <div className='text-field-container input-field-container'>
-      <Label text={conversion} type={"input"} />
+    <div className={containerStyle}>
+      <Label text={conversion} />
       <input
-        className='text-field input-field'
+        className={inputStyle}
         type='text'
         onChange={(e) => setInput(e.target.value)}
       />

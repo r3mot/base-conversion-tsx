@@ -1,0 +1,7 @@
+.button {
+  border-style: solid;
+  border-color: var(--purple-dark);
+  background: transparent;
+  cursor: pointer;
+  color: var(--offwhite);
+}
