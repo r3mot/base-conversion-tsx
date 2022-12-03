@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ConvertContext } from "../../../context";
-import { Conversion } from "../../../conversion";
+import { ConvertContext } from "@/context";
+import { Conversion } from "@/conversion";
 import { Button } from "../Button";
-import { buttons } from "../../../data/button";
+import { buttons } from "@/data/button";
 import style from "./style.module.css";
 
 /**
