@@ -1,5 +1,5 @@
 import { describe, it } from "vitest";
-import { Conversion } from "../conversion";
+import { Conversion } from "@/conversion";
 
 describe("dec2bin", () => {
   it("should convert decimal to binary", () => {

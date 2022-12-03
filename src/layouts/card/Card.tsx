@@ -1,4 +1,4 @@
-import { InputField, OutputField, ConvertButton } from "../../components";
+import { InputField, OutputField, ConvertButton } from "@/components";
 import style from "./style.module.css";
 
 const Card = () => {

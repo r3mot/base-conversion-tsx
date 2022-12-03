@@ -1,5 +1,5 @@
-import { navigationData } from "../../data/navigation";
-import { NavItem } from "../../components/navitem";
+import { navigationData } from "@/data/navigation";
+import { NavItem } from "@/components";
 import style from "./style.module.css";
 
 const Navbar = () => {

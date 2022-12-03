@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ConvertContext } from "../../context";
+import { ConvertContext } from "@/context";
 import style from "./style.module.css";
 
 /**
