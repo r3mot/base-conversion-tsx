@@ -3,7 +3,7 @@ import { ConvertContext } from "@/context";
 import { Conversion } from "@/conversion";
 import { Button } from "../Button";
 import { buttons } from "@/data/button";
-import style from "./style.module.css";
+import style from "./style.module.scss";
 
 /**
  *  Convert Button Component

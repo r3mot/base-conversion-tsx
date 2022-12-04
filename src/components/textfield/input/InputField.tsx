@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ConvertContext } from "@/context";
 import { Label } from "@/components/label";
-import tfStyle from "../textfield.module.css";
+import tfStyle from "../textfield.module.scss";
 import style from "./style.module.css";
 
 const containerStyle = `${style.container} ${tfStyle.container}`;

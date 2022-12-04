@@ -1,0 +1,8 @@
+@import "../../global.scss";
+
+.button {
+  border: $btn-border-primary-sm;
+  background: transparent;
+  cursor: pointer;
+  color: $color-offwhite;
+}

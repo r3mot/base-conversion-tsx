@@ -1,0 +1,12 @@
+@import "../../global.scss";
+
+.container {
+  display: flex;
+  width: 100%;
+  height: $label-hg-sm;
+}
+
+.label {
+  color: $color-offwhite;
+  font-size: $font-lg;
+}

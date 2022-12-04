@@ -1,0 +1,111 @@
+$color-primary-800: hsl(246, 22%, 9%);
+$color-secondary-800: hsl(247, 16%, 32%);
+$color-offwhite: #d6d2c4;
+
+// Border radius
+$border-radius-sm: 0.25rem; // 4px
+$border-radius-md: 0.5rem; // 8px
+$border-radius-lg: 0.75rem; // 12px
+$border-radius-xl: 1rem; // 16px
+$border-radius-xxl: 1.25rem; // 20px
+$border-radius-xxxl: 1.5rem; // 24px
+
+// Font Size
+$font-sm: 0.875rem; // 14px
+$font-md: 1rem; // 16px
+$font-lg: 1.125rem; // 18px
+$font-xl: 1.25rem; // 20px
+$font-xxl: 1.5rem; // 24px
+$font-xxxl: 1.75rem; // 28px
+
+// Font Weight
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+
+// Font Family
+$font-family-sans-serif: "Open Sans", sans-serif;
+$font-family-monospace: "Roboto Mono", monospace;
+$ff-geneva: Verdana, Geneva, Tahoma, sans-serif;
+
+// Line Height
+$line-height-sm: 1.5;
+
+// Letter Spacing
+$letter-spacing-sm: 0.025em;
+
+// Button Width
+$btn-wd-sm: 6.25rem; // 100px
+$btn-wd-md: 8.75rem; // 140px
+$btn-wd-lg: 11.25rem; // 180px
+$btn-wd-xl: 13.75rem; // 220px
+$btn-wd-xxl: 16.25rem; // 260px
+
+// Button Height
+$btn-hg-sm: 2.5rem; // 40px
+$btn-hg-md: 3.125rem; // 50px
+$btn-hg-lg: 3.75rem; // 60px
+$btn-hg-xl: 4.375rem; // 70px
+
+// Button Font Size
+$btn-font-size-sm: 0.875rem; // 14px
+$btn-font-size-md: 1rem; // 16px
+$btn-font-size-lg: 1.125rem; // 18px
+
+// Border Style
+$btn-border-primary-sm: solid 0.125rem $color-primary-800; // 2px
+$btn-border-primary-md: solid 0.1875rem $color-primary-800; // 3px
+$btn-border-primary-lg: solid 0.25rem $color-primary-800; // 4px
+$btn-border-secondary-sm: solid 0.125rem $color-secondary-800; // 2px
+$btn-border-secondary-md: solid 0.1875rem $color-secondary-800; // 3px
+$btn-border-secondary-lg: solid 0.25rem $color-secondary-800; // 4px
+$btn-border-hover: 10px solid rgb(214, 158, 158);
+$btn-border-active: 10px solid rgb(40, 179, 179);
+
+// Labels
+$label-wd-sm: 6.25rem; // 100px
+$label-wd-md: 8.75rem; // 140px
+$label-wd-lg: 11.25rem; // 180px
+
+$label-hg-sm: 2.5rem; // 40px
+$label-hg-md: 3.125rem; // 50px
+$label-hg-lg: 3.75rem; // 60px
+
+// Containers
+$container-wd-sm: 6.25rem; // 100px
+$container-wd-md: 8.75rem; // 140px
+$container-wd-lg: 11.25rem; // 180px
+$container-wd-xl: 13.75rem; // 220px
+$container-wd-xxl: 16.25rem; // 260px
+
+$container-hg-sm: 3.75rem; // 60px
+$container-hg-md: 4.375rem; // 70px
+$container-hg-lg: 5rem; // 80px
+$container-hg-xl: 5.625rem; // 90px
+$container-hg-xxl: 6.25rem; // 100px
+
+// Padding
+$padding-sm: 0.5rem; // 8px
+$padding-md: 1rem; // 16px
+$padding-lg: 1.5rem; // 24px
+$padding-xl: 2rem; // 32px
+
+// Margin
+$margin-sm: 0.5rem; // 8px
+$margin-md: 1rem; // 16px
+$margin-lg: 1.5rem; // 24px
+$margin-xl: 2rem; // 32px
+
+// Transition
+$transition-2ms: all 0.2s ease-in-out;
+$transition-3ms: all 0.3s ease-in-out;
+$transition-4ms: all 0.4s ease-in-out;
+
+// Icons
+$icon-sm: 1.5rem; // 24px
+$icon-md: 2rem; // 32px
+$icon-lg: 2.5rem; // 40px
+$icon-xl: 3rem; // 48px
+
+// TextField
+$border-tf: inset 3px rgb(94, 79, 107);

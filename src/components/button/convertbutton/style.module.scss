@@ -1,0 +1,22 @@
+@import "../../../global.scss";
+
+.convertButton {
+  width: $btn-wd-lg;
+  height: $btn-hg-lg;
+  border: $btn-border-primary-sm;
+  border-radius: $border-radius-xxxl;
+  font: $font-xl $ff-geneva;
+}
+
+.convertButton:hover {
+  background-color: $color-primary-800;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-area: button;
+}

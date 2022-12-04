@@ -1,0 +1,16 @@
+@import "../../global.scss";
+
+.container {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.textField {
+  background: $color-primary-800;
+  border-style: none;
+  border: $border-tf;
+  text-align: center;
+  font-size: $font-xl;
+  color: $color-offwhite;
+}

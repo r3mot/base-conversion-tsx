@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ConvertContext } from "@/context";
-import style from "./style.module.css";
+import style from "./style.module.scss";
 
 /**
  * Navigation Item Component

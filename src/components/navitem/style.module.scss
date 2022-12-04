@@ -1,0 +1,79 @@
+@import "../../global.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $container-hg-lg;
+  padding-left: $padding-lg;
+  border: none;
+  background: $color-secondary-800;
+  color: $color-offwhite;
+  cursor: pointer;
+}
+
+.container:hover,
+.container:active {
+  background: $color-primary-800;
+  color: $color-offwhite;
+  border-left: $btn-border-hover;
+}
+
+/* Border on Click */
+.container:hover:active {
+  border-left: $btn-border-active;
+}
+
+.itemTitle {
+  font-size: $font-lg;
+  padding-left: $padding-lg;
+  transition: $transition-2ms;
+}
+
+.itemIcon {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: $icon-md;
+  height: $icon-md;
+  margin-left: $margin-sm;
+}
+
+.longName {
+  font-size: $font-md;
+  width: 100%;
+}
+
+.shortName {
+  font-size: $font-md;
+  width: 100%;
+  display: none;
+}
+
+.bin2dec,
+.bin2hex {
+  background-image: url("../../assets/binary.png");
+}
+.dec2bin,
+.dec2hex {
+  background-image: url("../../assets/decimal.png");
+}
+.hex2dec,
+.hex2bin {
+  background-image: url("../../assets/hex.png");
+}
+
+@media screen and (max-width: 1500px) {
+  .longName {
+    display: none;
+  }
+
+  .shortName {
+    display: flex;
+  }
+}
+
+@media screen and (max-height: 765px) {
+  .container {
+    width: 50%;
+  }
+}
