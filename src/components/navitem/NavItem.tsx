@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { ConvertContext } from "@/context";
+import { useContext, useEffect } from "react";
+import { ConvertContext, ToggleContext } from "@/context";
 import style from "./style.module.scss";
 
 /**
@@ -10,9 +10,21 @@ import style from "./style.module.scss";
  */
 const NavItem = ({ id, name }: INavItemProps) => {
   const { setConversion } = useContext(ConvertContext);
+  const { toggle, setToggle } = useContext(ToggleContext);
+  const containerStyle = `${toggle ? style.active : style.container}`;
+
+  // Temporary until I find a better solution
+  // to close the mobile menu
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900) {
+        setToggle(false);
+      }
+    });
+  }, []);
 
   return (
-    <button className={style.container} onClick={() => setConversion(id)}>
+    <button className={containerStyle} onClick={() => setConversion(id)}>
       <i className={`${style.itemIcon} ${style[id]}`} />
       <span className={style.itemTitle}>
         <span className={style.shortName}>{id}</span>

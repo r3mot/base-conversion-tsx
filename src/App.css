@@ -10,9 +10,9 @@
   --purple-light: hsl(247, 16%, 32%);
 
   /* Font Sizes */
-  --font-sz-lg: 25px;
-  --font-sz-md: 20px;
-  --font-sz-sm: 18px;
+  --font-sz-lg: 1.5625rem;
+  --font-sz-md: 1.25rem;
+  --font-sz-sm: 1.125rem;
 
   /* Border Radius */
   --border-radius-xxl: 30px;

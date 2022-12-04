@@ -9,8 +9,9 @@
 .textField {
   background: $color-primary-800;
   border-style: none;
-  border: $border-tf;
+  // border: $border-tf;
   text-align: center;
   font-size: $font-xl;
   color: $color-offwhite;
+  border-radius: 5px;
 }

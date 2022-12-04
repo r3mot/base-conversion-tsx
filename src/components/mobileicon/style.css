@@ -1,0 +1,81 @@
+@media screen and (min-width: 56.25rem) {
+  .mobileIcon,
+  .menuToggle,
+  .hidden {
+    display: none;
+  }
+}
+
+.mobileIcon,
+.mobileIcon::before,
+.mobileIcon::after {
+  content: "";
+  display: block;
+  background: #ebebd3;
+  height: 6px;
+  width: 3em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.mobileIcon::before {
+  transform: translateY(-15px);
+}
+
+.mobileIcon::after {
+  transform: translateY(8px);
+}
+
+[aria-expanded="true"] .mobileIcon {
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .mobileIcon::before {
+  opacity: 0;
+}
+
+[aria-expanded="true"] .mobileIcon::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+.menuToggle {
+  padding: 1em;
+  background: transparent;
+  border: 0;
+  position: absolute;
+  top: 3em;
+  left: 2em;
+  cursor: pointer;
+  z-index: 3;
+  grid-area: menuIcon;
+}
+
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media screen and (max-width: 36rem) {
+  .menuToggle {
+    top: 4em;
+  }
+
+  .mobileIcon,
+  .mobileIcon::before,
+  .mobileIcon::after {
+    height: 3px;
+  }
+
+  .mobileIcon::before {
+    transform: translateY(-8px);
+  }
+
+  .mobileIcon::after {
+    transform: translateY(5px);
+  }
+}

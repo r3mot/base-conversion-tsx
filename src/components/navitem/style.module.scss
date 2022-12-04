@@ -1,15 +1,39 @@
 @import "../../global.scss";
+@import "../../breakpoint.scss";
 
-.container {
+.container,
+.active {
   display: flex;
   align-items: center;
   width: 100%;
-  height: $container-hg-lg;
+  height: 50px;
   padding-left: $padding-lg;
   border: none;
   background: $color-secondary-800;
   color: $color-offwhite;
   cursor: pointer;
+}
+
+.container {
+  @media screen and (min-width: 56.25rem) {
+    display: flex;
+  }
+
+  @media screen and (max-width: 75rem) {
+    .longName {
+      display: none;
+    }
+
+    .shortName {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-height: 765px) {
+    .container {
+      width: 50%;
+    }
+  }
 }
 
 .container:hover,
@@ -25,7 +49,7 @@
 }
 
 .itemTitle {
-  font-size: $font-lg;
+  font-size: $font-md;
   padding-left: $padding-lg;
   transition: $transition-2ms;
 }
@@ -62,18 +86,26 @@
   background-image: url("../../assets/hex.png");
 }
 
-@media screen and (max-width: 1500px) {
-  .longName {
-    display: none;
-  }
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  user-select: none;
+  padding-left: 0px;
 
-  .shortName {
-    display: flex;
+  @media screen and (min-width: 56.24rem) {
+    display: none;
   }
 }
 
-@media screen and (max-height: 765px) {
-  .container {
-    width: 50%;
-  }
+.active:hover,
+.active:active {
+  background: $color-primary-800;
+  color: $color-offwhite;
+  border-left: $btn-border-hover;
+}
+
+.active:hover:active {
+  border-left: $btn-border-active;
 }

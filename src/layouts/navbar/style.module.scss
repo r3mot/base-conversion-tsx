@@ -1,0 +1,45 @@
+@import "../../breakpoint.scss";
+
+.container,
+.active {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  background: var(--purple-light);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  gap: 30px;
+  width: $bp-nav-wd-md;
+  transition: width 0.2s ease-in-out;
+}
+
+.container {
+  @media screen and (min-width: $breakpoint-md) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    width: $bp-nav-wd-xxl;
+  }
+
+  @media screen and (min-width: $breakpoint-xxl) {
+    width: $bp-nav-wd-xxl;
+  }
+
+  @media screen and (min-width: $breakpoint-xxxl) {
+    width: $bp-nav-wd-xxl;
+  }
+
+  @media screen and (min-width: $breakpoint-xxxl) {
+    width: $bp-nav-wd-xxl;
+  }
+}
+
+.active {
+  display: flex;
+  width: 100%;
+}

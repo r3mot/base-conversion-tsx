@@ -2,8 +2,10 @@
 
 .container {
   display: flex;
+  justify-content: center;
   width: 100%;
   height: $label-hg-sm;
+  padding-bottom: 50px;
 }
 
 .label {

@@ -1,5 +1,5 @@
 import { InputField, OutputField, ConvertButton } from "@/components";
-import style from "./style.module.css";
+import style from "./style.module.scss";
 
 const Card = () => {
   return (

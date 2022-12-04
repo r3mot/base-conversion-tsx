@@ -1,0 +1,52 @@
+$breakpoints: (
+  xs: 23.75rem,
+  // 380px
+  sm: 36rem,
+  // 576px
+  md: 56.25rem,
+  // 900px
+  lg: 62rem,
+  // 992px
+  xl: 75rem,
+  // 1200px
+  xxl: 117.5rem,
+  // 1875px
+  xxxl: 125,
+  // 2000px
+  wide: 218.75rem,
+  // 3500px
+) !default;
+
+$breakpoint-xs: map-get($breakpoints, xs);
+$breakpoint-sm: map-get($breakpoints, sm);
+$breakpoint-md: map-get($breakpoints, md);
+$breakpoint-lg: map-get($breakpoints, lg);
+$breakpoint-xl: map-get($breakpoints, xl);
+$breakpoint-xxl: map-get($breakpoints, xxl); // my monitor is within this range
+$breakpoint-xxxl: map-get($breakpoints, xxxl);
+$breakpoint-wide: map-get($breakpoints, wide);
+
+// don't show item names, only icons
+$bp-nav-wd-sm: 5rem; // 192px
+$bp-nav-wd-md: 14rem; // 224px
+$bp-nav-wd-lg: 16rem; // 256px
+$bp-nav-wd-xxl: 18rem; // 288px
+$bp-nav-wd-xxxl: 20rem; // 320px
+$bp-nav-wd-xxxl: 24rem; // 352px
+$bp-nav-wd-xxxxl: 26rem; // 384px
+$bp-nav-wd-xxxxxl: 32rem; // 416px
+
+$bp-card-wd-sm: 25rem; // 400px
+$bp-card-wd-md: 30rem; // 480px
+$bp-card-wd-lg: 35rem; // 560px
+$bp-card-wd-xl: 40rem; // 640px
+$bp-card-wd-xxl: 45rem; // 720px
+$bp-card-wd-xxxl: 50rem; // 800px
+$bp-card-wd-xxxxl: 56rem; // 880px
+
+$bp-card-hg-sm: 40rem; // 640px
+$bp-card-hg-md: 43rem; // 688px
+$bp-card-hg-lg: 48rem; // 768px
+$bp-card-hg-xl: 58rem; // 928px
+$bp-card-hg-xxl: 63rem; // 1008px
+$bp-card-hg-xxxl: 68rem; // 1088px
