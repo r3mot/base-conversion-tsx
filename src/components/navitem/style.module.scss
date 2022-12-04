@@ -17,6 +17,7 @@
 .container {
   @media screen and (min-width: 56.25rem) {
     display: flex;
+    height: 80px;
   }
 
   @media screen and (max-width: 75rem) {
