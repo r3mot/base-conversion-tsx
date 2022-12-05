@@ -7,6 +7,8 @@
 
 # Table of contents
 
+Disclaimer: This project was developed as a learning tool for myself. It is by no means a "production" ready app. Feedback is ALWAYS welcome! Cheers :beers:
+
 - [:muscle: Motivation](https://github.com/r3mot/base-conversion-tsx/wiki/Motivation) <br>
 - [:computer: Technology](https://github.com/r3mot/base-conversion-tsx/wiki/Technology) <br>
 - [:white_flag: Development Process](https://github.com/r3mot/base-conversion-tsx/wiki/Development-Process)
