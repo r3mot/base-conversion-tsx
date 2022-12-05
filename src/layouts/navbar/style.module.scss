@@ -33,9 +33,9 @@
   }
 
   // 1875px
-  @media screen and (min-width: $breakpoint-xxl) {
-    width: $bp-nav-wd-xxl;
-  }
+  // @media screen and (min-width: $breakpoint-xxl) {
+  //   width: $bp-nav-wd-xl;
+  // }
 
   // 2000px
   @media screen and (min-width: $breakpoint-xxxl) {
@@ -72,5 +72,9 @@
 
   @media screen and (min-width: $breakpoint-xl) {
     left: 40px;
+  }
+
+  @media screen and (min-width: $breakpoint-xxl) {
+    top: 10px;
   }
 }
