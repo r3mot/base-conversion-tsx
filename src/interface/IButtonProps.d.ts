@@ -1,11 +1,11 @@
 /**
  * Interface for Button Component
- * @member {string} id - id of the button
  * @member {string} name - name of the button
+ * @member {CSSModuleClass} styles - optional custom styles
  * @member {React.MouseEventHandler<HTMLButtonElement>} onClick - onClick event handler
  */
 interface IButtonProps {
-  id: string;
   name: string;
+  styles?: CSSModuleClass;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }

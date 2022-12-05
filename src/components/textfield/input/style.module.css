@@ -1,0 +1,20 @@
+.input {
+  height: 80px;
+  width: 100%;
+}
+
+.container {
+  height: 100px;
+  grid-area: input;
+}
+
+::placeholder {
+  font-size: small;
+  color: rgba(128, 128, 128, 0.486);
+}
+
+/* @media screen and (min-width: 36rem) {
+  .container {
+    height: 80%;
+  }
+} */

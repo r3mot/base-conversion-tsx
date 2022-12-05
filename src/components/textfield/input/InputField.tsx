@@ -1,7 +1,13 @@
-import { useContext } from "react";
-import { ConvertContext } from "../../../context";
-import { Label } from "../components";
-import "./style.css";
+import React, { useContext, useEffect } from "react";
+import { ConvertContext } from "@/context";
+import { Conversion } from "@/conversion";
+import { Label } from "@/components/label";
+import { navigationData } from "@/data/navigation";
+import tfStyle from "../textfield.module.scss";
+import style from "./style.module.css";
+
+const containerStyle = `${style.container} ${tfStyle.container}`;
+const inputStyle = `${style.input} ${tfStyle.textField}`;
 
 /**
  * InputField Component
@@ -11,15 +17,27 @@ import "./style.css";
  * - {@link ConvertContext}
  */
 const InputField = () => {
-  const { setInput, conversion } = useContext(ConvertContext);
+  const { conversion, setResult, input, setInput } = useContext(ConvertContext);
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      const result = Conversion(conversion[0], input);
+      setResult(result);
+    }
+  };
+
+  useEffect(() => {
+    //
+  }, [input]);
 
   return (
-    <div className='text-field-container input-field-container'>
-      <Label text={conversion} type={"input"} />
+    <div className={containerStyle}>
+      <Label text={conversion[1]} data={navigationData} />
       <input
-        className='text-field input-field'
+        className={inputStyle}
         type='text'
         onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => handleKeyDown(e)}
       />
     </div>
   );

@@ -1,0 +1,14 @@
+@import "../../global.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: $label-hg-sm;
+  padding-bottom: 50px;
+}
+
+.label {
+  color: $color-offwhite;
+  font-size: $font-xl;
+}

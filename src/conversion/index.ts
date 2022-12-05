@@ -1,2 +1,1 @@
-import { Conversion } from "./Conversion";
-export { Conversion };
+export * from "./Conversion";
