@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { ConvertContext, ToggleContext } from "./context";
+import { MobileIcon } from "./components";
 import { Navbar, Card } from "./layouts";
-import "./App.scss";
+import style from "./App.module.scss";
 
 /**
  * Start of the application
@@ -25,9 +26,11 @@ const App = () => {
   };
 
   return (
-    <div className='App'>
+    <div className={style.App}>
       <ConvertContext.Provider value={convertProvider}>
+        <div className={style.logo} />
         <ToggleContext.Provider value={{ toggle, setToggle }}>
+          <MobileIcon />
           <Navbar />
         </ToggleContext.Provider>
         <Card />

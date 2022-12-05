@@ -1,7 +1,7 @@
 import { navigationData } from "@/data/navigation";
 import { useContext } from "react";
 import { ToggleContext } from "@/context";
-import { NavItem, MobileIcon } from "@/components";
+import { NavItem } from "@/components";
 import style from "./style.module.scss";
 
 const Navbar = () => {
@@ -9,17 +9,13 @@ const Navbar = () => {
   const containerStyle = `${toggle ? style.active : style.container}`;
 
   return (
-    <>
-      <MobileIcon />
-      <ul
-        id='navbar'
-        className={containerStyle}
-        aria-label='Sidebar for conversion buttons. Select an item to change the conversion type'>
-        {navigationData.map((navItem) => {
-          return <NavItem {...navItem} key={navItem.id} />;
-        })}
-      </ul>
-    </>
+    <ul
+      className={containerStyle}
+      aria-label='sidebar for conversion type buttons'>
+      {navigationData.map((navItem) => {
+        return <NavItem {...navItem} key={navItem.id} />;
+      })}
+    </ul>
   );
 };
 

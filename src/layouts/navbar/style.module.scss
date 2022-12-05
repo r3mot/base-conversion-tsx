@@ -16,13 +16,14 @@ ul,
   gap: 30px;
   width: $bp-nav-wd-md;
   transition: width 0.2s ease-in-out;
+  padding-top: 0px;
 }
 
 ul {
   // 900px
   @media screen and (min-width: $breakpoint-md) {
     display: flex;
-    gap: 0px;
+    gap: 15px;
     // padding: 180px 0px 180px 0px;
     width: $bp-nav-wd-sm;
   }
@@ -32,10 +33,9 @@ ul {
     width: $bp-nav-wd-xl;
   }
 
-  // 1875px
-  // @media screen and (min-width: $breakpoint-xxl) {
-  //   width: $bp-nav-wd-xl;
-  // }
+  @media screen and (min-width: $breakpoint-xxl) {
+    padding-top: 50px;
+  }
 
   // 2000px
   @media screen and (min-width: $breakpoint-xxxl) {
@@ -50,33 +50,6 @@ ul {
 .active {
   display: flex;
   width: 100%;
-}
-
-.logo {
-  position: absolute;
-  left: 40px;
-  top: 0px;
-  background-image: url("../../assets/basedlogo.png");
-  width: 200px;
-  height: 200px;
-  z-index: 4;
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: none;
-
-  @media screen and (min-width: $breakpoint-md) {
-    display: block;
-    left: 0px;
-  }
-
-  @media screen and (min-width: $breakpoint-xl) {
-    left: 40px;
-  }
-
-  @media screen and (min-width: $breakpoint-xxl) {
-    top: 10px;
-  }
 }
 
 li {

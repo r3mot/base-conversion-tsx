@@ -21,19 +21,16 @@ $card-pd-xl: 50px 55px 36px 55px;
   background: $color-secondary-800;
   padding: 50px 30px 20px 30px;
   row-gap: 15px;
+  grid-template-areas:
+    "menuIcon"
+    "input"
+    "output"
+    "button";
 
-  @media screen and (max-width: 576px) {
-    grid-template-areas:
-      "menuIcon"
-      "input"
-      "output"
-      "button";
-
-    width: $card-wd-sm;
-    height: $card-hg-sm;
-    grid-template-rows: 50px 150px auto 150px;
-    padding: $card-pd-xs;
-  }
+  width: $card-wd-sm;
+  height: $card-hg-sm;
+  grid-template-rows: 50px 150px auto 150px;
+  padding: $card-pd-xs;
 
   @media screen and (min-width: $breakpoint-sm) {
     width: $card-wd-md;
@@ -48,77 +45,22 @@ $card-pd-xl: 50px 55px 36px 55px;
 
   @media screen and (min-width: $breakpoint-md) {
     width: $card-wd-lg;
-    height: $card-hg-md;
     border-radius: 20px;
     box-shadow: rgba(54, 175, 255, 0.116) 0px 50px 100px -20px,
       rgba(232, 53, 241, 0.356) 0px 30px 60px -30px;
     margin-left: 200px;
+    padding: $card-pd-xl;
   }
 
   @media screen and (min-width: $breakpoint-lg) {
     width: $card-wd-lg;
-    height: $card-hg-lg;
-    margin-left: 250px;
-    padding: $card-pd-lg;
   }
 
   @media screen and (min-width: $breakpoint-xl) {
     width: $card-wd-xl;
     height: $card-hg-lg;
     grid-template-rows: 150px 350px 80px;
-    padding: $card-pd-xl;
+    margin-left: 250px;
     row-gap: 20px;
   }
 }
-
-// .container {
-// background: var(--purple-light);
-// display: inline-grid;
-// $spacing: 50px;
-// $ratio: 30%;
-// grid-template-areas:
-//   "input"
-//   "output"
-//   "button";
-// margin: 0px;
-// border-radius: 20px;
-// padding: $ratio 50px 20px 50px;
-// row-gap: $spacing;
-// align-items: center;
-// justify-items: center;
-// width: 100%;
-// height: 100%;
-
-// small
-// @media screen and (min-width: $breakpoint-sm) {
-//   width: $bp-card-wd-sm;
-//   height: $bp-card-hg-sm;
-//   padding: 50px 30px 10px 30px;
-// }
-
-// @media screen and (min-width: $breakpoint-md) {
-//   width: $bp-card-wd-md;
-//   height: $bp-card-hg-lg;
-//   border-radius: 20px;
-//   box-shadow: rgba(54, 175, 255, 0.116) 0px 50px 100px -20px,
-//     rgba(232, 53, 241, 0.356) 0px 30px 60px -30px;
-//   margin-left: 200px;
-//   grid-template-rows: 200px 250px 250px;
-// }
-
-// @media screen and (min-width: $breakpoint-lg) {
-//   width: $bp-card-wd-lg;
-//   height: $bp-card-hg-lg;
-//   margin-left: 250px;
-// }
-
-// @media screen and (min-width: $breakpoint-xl) {
-//   width: $bp-card-wd-xl;
-// }
-
-// @media screen and (min-width: $breakpoint-xxl) {
-//   width: $bp-card-wd-xxl;
-//   height: $bp-card-hg-xl;
-//   margin-left: 300px;
-// }
-// }

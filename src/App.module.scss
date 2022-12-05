@@ -1,0 +1,52 @@
+@import "./global.scss";
+@import "./breakpoint.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  /* Font Sizes */
+  --font-sz-lg: 1.5625rem;
+  --font-sz-md: 1.25rem;
+  --font-sz-sm: 1.125rem;
+
+  /* Buttons */
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-display: swap;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-primary-800;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  z-index: 6;
+  background-image: url("../src/assets/basedlogo.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: none;
+
+  @media screen and (min-width: $breakpoint-md) {
+    display: block;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    left: 100px;
+  }
+
+  @media screen and (min-width: $breakpoint-xxl) {
+  }
+}
