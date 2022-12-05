@@ -1,8 +1,8 @@
 @import "../../global.scss";
 @import "../../breakpoint.scss";
 
-.container,
-.active {
+li,
+.buttonActive {
   display: flex;
   align-items: center;
   width: 100%;
@@ -14,7 +14,16 @@
   cursor: pointer;
 }
 
-.container {
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: transparent;
+  border: none;
+  color: inherit;
+}
+
+li {
   @media screen and (min-width: 56.25rem) {
     display: flex;
     height: 80px;
@@ -35,21 +44,21 @@
   }
 
   @media screen and (max-height: 765px) {
-    .container {
+    .button {
       width: 50%;
     }
   }
 }
 
-.container:hover,
-.container:active {
+li:hover,
+li:active {
   background: $color-primary-800;
   color: $color-offwhite;
   border-left: $btn-border-hover;
 }
 
 /* Border on Click */
-.container:hover:active {
+li:hover:active {
   border-left: $btn-border-active;
 }
 
@@ -91,7 +100,7 @@
   background-image: url("../../assets/hex.png");
 }
 
-.active {
+.buttonActive {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,13 +113,13 @@
   }
 }
 
-.active:hover,
-.active:active {
+.button:active {
   background: $color-primary-800;
   color: $color-offwhite;
-  border-left: $btn-border-hover;
 }
 
-.active:hover:active {
-  border-left: $btn-border-active;
+.buttonActive:hover,
+.buttonActive:active {
+  background: $color-primary-800;
+  color: $color-offwhite;
 }

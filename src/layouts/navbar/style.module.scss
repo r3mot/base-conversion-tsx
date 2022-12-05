@@ -1,7 +1,7 @@
 @import "../../breakpoint.scss";
 @import "../../global.scss";
 
-.container,
+ul,
 .active {
   position: absolute;
   left: 0px;
@@ -18,12 +18,12 @@
   transition: width 0.2s ease-in-out;
 }
 
-.container {
+ul {
   // 900px
   @media screen and (min-width: $breakpoint-md) {
     display: flex;
     gap: 0px;
-    padding: 180px 0px 180px 0px;
+    // padding: 180px 0px 180px 0px;
     width: $bp-nav-wd-sm;
   }
 
@@ -77,4 +77,8 @@
   @media screen and (min-width: $breakpoint-xxl) {
     top: 10px;
   }
+}
+
+li {
+  list-style-type: none;
 }

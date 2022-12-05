@@ -11,13 +11,13 @@ const Navbar = () => {
   return (
     <>
       <MobileIcon />
-      <div className={style.logo} />
-      <ul className={style.ul}>
-        <div className={containerStyle}>
-          {navigationData.map((navItem, index) => {
-            return <NavItem id={navItem.id} name={navItem.name} key={index} />;
-          })}
-        </div>
+      <ul
+        id='navbar'
+        className={containerStyle}
+        aria-label='Sidebar for conversion buttons. Select an item to change the conversion type'>
+        {navigationData.map((navItem) => {
+          return <NavItem {...navItem} key={navItem.id} />;
+        })}
       </ul>
     </>
   );

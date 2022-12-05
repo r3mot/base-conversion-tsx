@@ -13,10 +13,10 @@ const MobileIcon = () => {
     <button
       onClick={handleToggle}
       className='menuToggle'
-      aria-controls='primary-navigation'
-      aria-expanded='false'>
+      aria-controls='mobile-navigation'
+      aria-expanded={toggle}>
       <span className='hidden'>Menu</span>
-      <div className='mobileIcon' aria-hidden='true'></div>
+      <div className='mobileIcon' aria-hidden={!toggle}></div>
     </button>
   );
 };
