@@ -1,0 +1,26 @@
+@import "./global.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  /* Font Sizes */
+  --font-sz-lg: 1.5625rem;
+  --font-sz-md: 1.25rem;
+  --font-sz-sm: 1.125rem;
+
+  /* Buttons */
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-display: swap;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-primary-800;
+}

@@ -7,6 +7,5 @@
 interface INavItemProps {
   name: string;
   id: string;
-  index: number;
   iconStyle?: CSSModuleClass;
 }

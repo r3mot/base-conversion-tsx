@@ -14,7 +14,7 @@ const Navbar = () => {
       <ul className={style.ul}>
         <div className={containerStyle}>
           {navigationData.map((navItem, index) => {
-            return <NavItem {...navItem} index={index + 1} key={index} />;
+            return <NavItem id={navItem.id} name={navItem.name} key={index} />;
           })}
         </div>
       </ul>

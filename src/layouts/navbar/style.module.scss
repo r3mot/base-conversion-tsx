@@ -1,4 +1,5 @@
 @import "../../breakpoint.scss";
+@import "../../global.scss";
 
 .container,
 .active {
@@ -7,7 +8,7 @@
   top: 0px;
   width: 300px;
   height: 100%;
-  background: var(--purple-light);
+  background: $color-secondary-800;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -18,18 +19,25 @@
 }
 
 .container {
+  // 900px
   @media screen and (min-width: $breakpoint-md) {
     display: flex;
+    gap: 0px;
+    padding: 180px 0px 180px 0px;
+    width: $bp-nav-wd-sm;
   }
 
+  // 1200px
   @media screen and (min-width: $breakpoint-xl) {
-    width: $bp-nav-wd-xxl;
+    width: $bp-nav-wd-xl;
   }
 
+  // 1875px
   @media screen and (min-width: $breakpoint-xxl) {
     width: $bp-nav-wd-xxl;
   }
 
+  // 2000px
   @media screen and (min-width: $breakpoint-xxxl) {
     width: $bp-nav-wd-xxl;
   }

@@ -27,11 +27,11 @@ $breakpoint-xxxl: map-get($breakpoints, xxxl);
 $breakpoint-wide: map-get($breakpoints, wide);
 
 // don't show item names, only icons
-$bp-nav-wd-sm: 5rem; // 192px
+$bp-nav-wd-sm: 12rem; // 192px
 $bp-nav-wd-md: 14rem; // 224px
 $bp-nav-wd-lg: 16rem; // 256px
-$bp-nav-wd-xxl: 18rem; // 288px
-$bp-nav-wd-xxxl: 20rem; // 320px
+$bp-nav-wd-xl: 18rem; // 288px
+$bp-nav-wd-xxl: 20rem; // 320px
 $bp-nav-wd-xxxl: 24rem; // 352px
 $bp-nav-wd-xxxxl: 26rem; // 384px
 $bp-nav-wd-xxxxxl: 32rem; // 416px

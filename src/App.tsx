@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ConvertContext, ToggleContext } from "./context";
 import { Navbar, Card } from "./layouts";
-import "./App.css";
+import "./App.scss";
 
 /**
  * Start of the application

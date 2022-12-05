@@ -1,9 +1,10 @@
 @import "../../breakpoint.scss";
+@import "../../global.scss";
 
 $card-wd-sm: 100%;
 $card-wd-md: 500px;
 $card-wd-lg: 550px;
-$card-wd-xl: 700px;
+$card-wd-xl: 650px;
 
 $card-hg-sm: 100%;
 $card-hg-md: 600px;
@@ -11,14 +12,15 @@ $card-hg-lg: 700px;
 $card-hg-xl: 1000px;
 
 $card-pd-xs: 3.125em 1.875em 1.25em 1.875em;
-$card-pd-lg: 5em 2.5em 1.875em 2.5em;
+$card-pd-lg: 48px 40px 30px 40px;
+$card-pd-xl: 50px 55px 36px 55px;
 
 .container {
   display: grid;
   align-items: top;
-  background: var(--purple-light);
+  background: $color-secondary-800;
   padding: 50px 30px 20px 30px;
-  row-gap: 30px;
+  row-gap: 15px;
 
   @media screen and (max-width: 576px) {
     grid-template-areas:
@@ -26,7 +28,7 @@ $card-pd-lg: 5em 2.5em 1.875em 2.5em;
       "input"
       "output"
       "button";
-    background: var(--purple-light);
+
     width: $card-wd-sm;
     height: $card-hg-sm;
     grid-template-rows: 50px 150px auto 150px;
@@ -36,7 +38,8 @@ $card-pd-lg: 5em 2.5em 1.875em 2.5em;
   @media screen and (min-width: $breakpoint-sm) {
     width: $card-wd-md;
     height: $card-hg-md;
-    grid-template-rows: 150px auto 150px;
+    border-radius: 20px;
+    grid-template-rows: 150px auto 80px;
     grid-template-areas:
       "input"
       "output"
@@ -62,6 +65,9 @@ $card-pd-lg: 5em 2.5em 1.875em 2.5em;
   @media screen and (min-width: $breakpoint-xl) {
     width: $card-wd-xl;
     height: $card-hg-lg;
+    grid-template-rows: 150px 350px 80px;
+    padding: $card-pd-xl;
+    row-gap: 20px;
   }
 }
 
