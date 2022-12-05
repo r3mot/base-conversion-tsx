@@ -8,34 +8,46 @@ import style from "./style.module.scss";
  * @param {string} id - Id of the navigation item
  * @returns
  */
-const NavItem = ({ id, name }: INavItemProps) => {
+const NavItem = ({ ...props }: INavItemProps) => {
   const { setConversion } = useContext(ConvertContext);
   const { toggle, setToggle } = useContext(ToggleContext);
-  const containerStyle = `${toggle ? style.active : style.container}`;
+  const containerStyle = `${toggle ? style.buttonActive : style.button}`;
 
-  // Temporary until I find a better solution
-  // to close the mobile menu
+  // Temporary until I find a more "react" solution
   useEffect(() => {
     window.addEventListener("resize", () => {
       if (window.innerWidth > 900) {
         setToggle(false);
       }
     });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+          setToggle(false);
+        }
+      });
+    };
   }, []);
 
   const handleClick = () => {
-    setConversion([id, name]);
+    setConversion([props.id, props.name]);
     setToggle(false);
   };
 
   return (
-    <button className={containerStyle} onClick={handleClick}>
-      <i className={`${style.itemIcon} ${style[id]}`} />
-      <span className={style.itemTitle}>
-        <span className={style.shortName}>{id}</span>
-        <span className={style.longName}>{name}</span>
-      </span>
-    </button>
+    <li>
+      <button
+        className={containerStyle}
+        onClick={handleClick}
+        aria-label={`Convert ${props.name}`}>
+        <i className={`${style.itemIcon} ${style[props.id]}`} />
+        <span className={style.itemTitle}>
+          <span className={style.shortName}>{props.id}</span>
+          <span className={style.longName}>{props.name}</span>
+        </span>
+      </button>
+    </li>
   );
 };
 

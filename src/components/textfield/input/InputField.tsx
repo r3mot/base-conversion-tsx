@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useContext, useEffect } from "react";
 import { ConvertContext } from "@/context";
 import { Conversion } from "@/conversion";
@@ -25,7 +26,6 @@ const InputField = () => {
       setResult(result);
     }
   };
-
   useEffect(() => {
     //
   }, [input]);
@@ -34,10 +34,13 @@ const InputField = () => {
     <div className={containerStyle}>
       <Label text={conversion[1]} data={navigationData} />
       <input
+        id='conversion-input'
         className={inputStyle}
         type='text'
+        aria-label='value to convert'
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => handleKeyDown(e)}
+        placeholder='Enter a value to convert.'
       />
     </div>
   );

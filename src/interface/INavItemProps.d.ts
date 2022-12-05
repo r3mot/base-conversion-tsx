@@ -8,4 +8,9 @@ interface INavItemProps {
   name: string;
   id: string;
   iconStyle?: CSSModuleClass;
+  ref: React<HTMLLIElement>;
 }
+
+type NavItemProps = {
+  props: INavItemProps;
+};
