@@ -7,7 +7,10 @@ import "./App.scss";
  * Start of the application
  */
 const App = () => {
-  const [conversion, setConversion] = useState<string[]>(["", "Enter a value"]);
+  const [conversion, setConversion] = useState<string[]>([
+    "bin2dec",
+    "Binary to Decimal",
+  ]);
   const [input, setInput] = useState<string>("1010");
   const [result, setResult] = useState<string>("");
   const [toggle, setToggle] = useState<boolean>(false);
