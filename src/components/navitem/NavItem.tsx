@@ -36,11 +36,8 @@ const NavItem = ({ ...props }: INavItemProps) => {
   };
 
   return (
-    <li>
-      <button
-        className={containerStyle}
-        onClick={handleClick}
-        aria-label={`Convert ${props.name}`}>
+    <li onClick={handleClick}>
+      <button className={containerStyle} aria-label={`Convert ${props.name}`}>
         <i className={`${style.itemIcon} ${style[props.id]}`} />
         <span className={style.itemTitle}>
           <span className={style.shortName}>{props.id}</span>
