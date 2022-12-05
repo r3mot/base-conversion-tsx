@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { ConvertContext } from "@/context";
+import { Conversion } from "@/conversion";
 import { Label } from "@/components/label";
+import { navigationData } from "@/data/navigation";
 import tfStyle from "../textfield.module.scss";
 import style from "./style.module.css";
-import { navigationData } from "@/data/navigation";
-import { Conversion } from "@/conversion";
 
 const containerStyle = `${style.container} ${tfStyle.container}`;
 const inputStyle = `${style.input} ${tfStyle.textField}`;
@@ -19,10 +19,9 @@ const inputStyle = `${style.input} ${tfStyle.textField}`;
 const InputField = () => {
   const { conversion, setResult, input, setInput } = useContext(ConvertContext);
 
-  // Start conversion on "Enter" key press
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
-      const result = Conversion(conversion, input);
+      const result = Conversion(conversion[0], input);
       setResult(result);
     }
   };
@@ -33,11 +32,10 @@ const InputField = () => {
 
   return (
     <div className={containerStyle}>
-      <Label text={conversion} data={navigationData} />
+      <Label text={conversion[1]} data={navigationData} />
       <input
         className={inputStyle}
         type='text'
-        placeholder='Enter a value'
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => handleKeyDown(e)}
       />

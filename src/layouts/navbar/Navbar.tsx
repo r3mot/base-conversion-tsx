@@ -11,6 +11,7 @@ const Navbar = () => {
   return (
     <>
       <MobileIcon />
+      <div className={style.logo} />
       <ul className={style.ul}>
         <div className={containerStyle}>
           {navigationData.map((navItem, index) => {

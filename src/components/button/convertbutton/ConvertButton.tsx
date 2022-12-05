@@ -13,7 +13,7 @@ const ConvertButton = () => {
   const { conversion, input, setResult } = useContext(ConvertContext);
 
   const executeConversion = () => {
-    const result = Conversion(conversion, input);
+    const result = Conversion(conversion[0], input);
     setResult(result);
   };
 

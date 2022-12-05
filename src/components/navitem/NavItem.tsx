@@ -23,8 +23,13 @@ const NavItem = ({ id, name }: INavItemProps) => {
     });
   }, []);
 
+  const handleClick = () => {
+    setConversion([id, name]);
+    setToggle(false);
+  };
+
   return (
-    <button className={containerStyle} onClick={() => setConversion(id)}>
+    <button className={containerStyle} onClick={handleClick}>
       <i className={`${style.itemIcon} ${style[id]}`} />
       <span className={style.itemTitle}>
         <span className={style.shortName}>{id}</span>
