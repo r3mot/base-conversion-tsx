@@ -1,9 +1,4 @@
 const dec2bin = (input: string) => {
-  //convert decimal to binary
-  // if the input is a decimal point number then split it into two parts
-  // if there isnt a decimal point then just convert the whole number
-  // reutrn the result in 2s complement with 16 bits only
-
   const decPart = input.split(".")[1];
   let result = "";
 

@@ -11,10 +11,7 @@ const bin2hex = (input: string): string => {
 
     const intPartHex = parseInt(input.split(".")[0], 2).toString(16);
     result = intPartHex + "." + decPartHex.slice(0, 8);
-  }
-  // if there are decimal points, convert the binary to hexadecimal
-  // and convert the decimal part to hexadecimal
-  else {
+  } else {
     result = parseInt(input, 2).toString(16);
   }
 
@@ -34,10 +31,7 @@ const bin2dec = (input: string): string => {
 
     const intPartDec = parseInt(input.split(".")[0], 2).toString(10);
     result = intPartDec + "." + decPartDec.slice(0, 8);
-  }
-  // if there are decimal points, convert the binary to decimal
-  // and convert the decimal part to decimal
-  else {
+  } else {
     result = parseInt(input, 2).toString(10);
   }
 
