@@ -18,7 +18,7 @@ const bin2hex = (input: string): string => {
     result = parseInt(input, 2).toString(16);
   }
 
-  return result;
+  return result.toUpperCase();
 };
 
 const bin2dec = (input: string): string => {
