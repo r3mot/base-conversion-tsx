@@ -19,7 +19,7 @@ Disclaimer: This project was developed as a learning tool for myself. It is by n
 
 ## :pushpin: TODO
 
-- [ ] Feat: Make buttons more accessable (tabbing)
+- [x ] Feat: Make buttons more accessable (tabbing)
 - [ ] Feat: Implement Base Arithmetic
 - [ ] Chore: Create new prettier configuration
 - [ ] Test: Implement component test
