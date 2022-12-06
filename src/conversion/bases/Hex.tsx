@@ -1,33 +1,18 @@
-import { dec2bin } from "./Decimal";
-
 // Hexadecimal to Binary
 const hex2bin = (input: string): string => {
-  const decimal = hex2dec(input);
-  const binary = dec2bin(decimal);
+  const [beforePoint, afterPoint] = input.split(".");
+  const binaryBeforePoint = parseInt(beforePoint, 16).toString(2);
+  const binaryAfterPoint = parseInt(afterPoint, 16).toString(2);
 
-  return binary;
+  if (input.includes(".")) {
+    return `${binaryBeforePoint}.${binaryAfterPoint}`;
+  } else {
+    return binaryBeforePoint;
+  }
 };
 
-// Hexadecimal to Decimal
-//TODO: fix this
 const hex2dec = (input: string): string => {
-  return parseInt(input, 16).toString();
-  //   var result = 0;
-  //   var power = input.length - 1;
-
-  //   for (let i = 0; i < input.length; i++) {
-  //     console.log("input:: ", input[i]);
-  //     var decimal = hex2decMap.get(input[i])!;
-  //     result += decimal * Math.pow(16, power);
-  //     power--;
-  //   }
-
-  //   return result.toString();
+  return parseInt(input, 16).toString(10);
 };
 
-// Hexadecimal to Hexadecimal
-const hex2hex = (input: string): string => {
-  return input;
-};
-
-export { hex2bin, hex2dec, hex2hex };
+export { hex2bin, hex2dec };

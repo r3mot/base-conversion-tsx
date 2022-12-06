@@ -5,9 +5,12 @@ import style from "./style.module.scss";
  * @see {@link IButtonProps} for more information
  * @example ```<Button name="Convert" onClick={handleClick} style?={myStyle.countButton}/>```
  */
-const Button = ({ name, onClick, styles }: IButtonProps) => {
+const Button = ({ name, onClick, styles, disabled }: IButtonProps) => {
   return (
-    <button className={`${styles} ${style.button}`} onClick={onClick}>
+    <button
+      disabled={disabled}
+      className={`${styles} ${style.button}`}
+      onClick={onClick}>
       {name}
     </button>
   );

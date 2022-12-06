@@ -1,42 +1,41 @@
-import { bin2hexMap } from "../utility/maps";
-
-// binary to hexadecimal conversion
 const bin2hex = (input: string): string => {
-  let blockWidth = 4;
+  const decimalPart = input.split(".")[1];
   let result = "";
 
-  // ensures each block will contain 4 bits
-  while (input.length % 4 != 0) {
-    input = "0" + input;
+  if (decimalPart !== undefined) {
+    const decPartHex = (
+      parseInt(decimalPart, 2) / Math.pow(2, decimalPart.length)
+    )
+      .toString(16)
+      .split(".")[1];
+
+    const intPartHex = parseInt(input.split(".")[0], 2).toString(16);
+    result = intPartHex + "." + decPartHex.slice(0, 8);
+  } else {
+    result = parseInt(input, 2).toString(16);
   }
 
-  // seperate the binary string into 4 bit blocks
-  for (let i = 0; i < input.length; i++) {
-    const block = input.substring(i, blockWidth);
-    if (block != "0000") {
-      result += bin2hexMap.get(block);
-    }
-    blockWidth += 4;
-    i += 3;
+  return result.toUpperCase();
+};
+
+const bin2dec = (input: string): string => {
+  const decimalPart = input.split(".")[1];
+  let result = "";
+
+  if (decimalPart !== undefined) {
+    const decPartDec = (
+      parseInt(decimalPart, 2) / Math.pow(2, decimalPart.length)
+    )
+      .toString(10)
+      .split(".")[1];
+
+    const intPartDec = parseInt(input.split(".")[0], 2).toString(10);
+    result = intPartDec + "." + decPartDec.slice(0, 8);
+  } else {
+    result = parseInt(input, 2).toString(10);
   }
 
   return result;
 };
 
-// binary to binary conversion
-const bin2bin = (input: string): string => {
-  return input;
-};
-
-// binary to decimal
-const bin2dec = (input: string): string => {
-  let decimal = 0;
-  for (let i = 0; i < input.length; i++) {
-    if (input[input.length - (i + 1)] === "1") {
-      decimal += 2 ** i;
-    }
-  }
-  return decimal.toString();
-};
-
-export { bin2hex, bin2bin, bin2dec };
+export { bin2hex, bin2dec };
