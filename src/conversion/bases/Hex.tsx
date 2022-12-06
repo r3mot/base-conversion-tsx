@@ -8,26 +8,21 @@ const hex2bin = (input: string): string => {
   return binary;
 };
 
-// Hexadecimal to Decimal
-//TODO: fix this
 const hex2dec = (input: string): string => {
-  return parseInt(input, 16).toString();
-  //   var result = 0;
-  //   var power = input.length - 1;
+  const hex = input.toUpperCase();
+  const hexArray = hex.split("");
+  const hexArrayLength = hexArray.length;
+  let decimal = 0;
 
-  //   for (let i = 0; i < input.length; i++) {
-  //     console.log("input:: ", input[i]);
-  //     var decimal = hex2decMap.get(input[i])!;
-  //     result += decimal * Math.pow(16, power);
-  //     power--;
-  //   }
+  for (let i = 0; i < hexArrayLength; i++) {
+    const hexChar = hexArray[i];
+    const hexCharValue = parseInt(hexChar, 16);
+    const hexCharValueTimes16Power =
+      hexCharValue * Math.pow(16, hexArrayLength - i - 1);
+    decimal += hexCharValueTimes16Power;
+  }
 
-  //   return result.toString();
+  return decimal.toString();
 };
 
-// Hexadecimal to Hexadecimal
-const hex2hex = (input: string): string => {
-  return input;
-};
-
-export { hex2bin, hex2dec, hex2hex };
+export { hex2bin, hex2dec };

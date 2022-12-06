@@ -1,0 +1,3 @@
+interface IAlertProps {
+  message: string;
+}

@@ -9,9 +9,7 @@ const Navbar = () => {
   const containerStyle = `${toggle ? style.active : style.container}`;
 
   return (
-    <ul
-      className={containerStyle}
-      aria-label='sidebar for conversion type buttons'>
+    <ul className={containerStyle} aria-label='conversion type buttons'>
       {navigationData.map((navItem) => {
         return <NavItem {...navItem} key={navItem.id} />;
       })}
